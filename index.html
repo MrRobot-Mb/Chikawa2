@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <video id="vid" src="Chikawa.mp4" loop></video>
+
+  <script>
+    const video = document.getElementById("vid");
+
+    // Ẩn video cho đến khi click
+    video.style.display = "none";
+
+    document.body.addEventListener("click", () => {
+      video.style.display = "block";
+      video.play();
+    }, { once: true }); // Chỉ thực hiện 1 lần
+  </script>
+</body>
+</html>
